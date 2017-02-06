@@ -1,0 +1,24 @@
+{
+  "name": "VFAnalyzer",
+  "version": "1.0.0",
+  "description": "An analyzer for updating VF to LSDS/LCF",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "npm upgrade"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "body-parser": "*",
+    "express": "*",
+    "express-dustjs": "*",
+    "express-session": "*",
+    "htmlparser2": "*",
+    "jsforce": "*",
+    "sync-request": "^4.0.1",
+    "then-request": "^2.2.0",
+    "underscore": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

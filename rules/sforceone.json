@@ -1,0 +1,13 @@
+{
+	"name":"sforce.one detected",
+	"type":"javascript",
+	"inclusions":["sforce.one"],
+	"inclusions_rule":"any",
+	"exclusions":null,
+	"exclusions_rule":null,
+	"description":"The page refers to the sforce.one object.",
+	"issues":"LEX may not support all use cases of sforce.one, like detecting the current user interface theme.",
+	"suggestions":"Use the $User.UITheme and $User.UIThemeDisplayed global variables to detect user interface theme.",
+	"auto":null,
+	"severity":"warning"
+}

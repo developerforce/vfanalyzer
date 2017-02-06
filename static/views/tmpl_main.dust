@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+	<TITLE>{+title/}</TITLE>
+	<link rel="stylesheet" href="/slds_105/assets/styles/salesforce-lightning-design-system.min.css">
+
+	{+style_block/}
+	{+script_block/}
+
+</HEAD>
+<BODY>
+<div class="slds">
+
+<div class="slds-page-header" role="banner">
+ <div class="slds-grid">
+ 	
+    <div class="slds-col slds-has-flexi-truncate">
+	    <div class="slds-card__header slds-grid">
+        <div class="slds-media slds-media--center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/slds_105/assets/icons/custom-sprite/svg/symbols.svg#custom9"></use>
+            </svg>
+          </div>
+          <div class="slds-media__body">
+            <p class="slds-page-header__title slds-truncate slds-align-middle"><a href="/">VF Page Analyzer</a></p>
+    	  </div>
+        </div>
+        </div>
+    </div>
+
+	 <div class="slds-col slds-no-flex slds-align-bottom">
+      <div class="slds-button-group" role="group">
+        {@eq key=login value="true" type="boolean"}
+        	<a href="/oauth/auth"><button class="slds-button slds-button--neutral">Salesforce Login</button></a>
+        {:else}
+        	<a href="/analysis"><button class="slds-button slds-button--neutral">Analyze Pages</button></a>
+        {/eq}
+      </div>
+    </div>
+</div>
+
+</div>
+
+<div class="slds-grid slds-m-top--large slds-m-left--large">
+	<div class="slds-col--padded slds-size--1-of-1">
+		{+body_content/}
+	</div>
+</div>
+
+
+</BODY>
+</HTML>

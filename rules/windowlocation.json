@@ -1,0 +1,13 @@
+{
+	"name":"Window Location Href",
+	"type":"javascript",
+	"inclusions":["window.location.href"],
+	"inclusions_rule":"all",
+	"exclusions":null,
+	"exclusions_rule":null,
+	"description":"Included JavaScript relies on window.location.href, which is not supported in LEX",
+	"issues":"Included JavaScript relies on window.location.href, which is not supported in LEX",
+	"suggestions":"Replace navigation control with sforce.one",
+	"auto":null,
+	"severity:": "error"
+}

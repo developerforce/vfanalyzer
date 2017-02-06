@@ -1,0 +1,95 @@
+{>"tmpl_main"/}
+
+{<title}VF Page Analyzer{/title}
+
+{<style_block}
+<STYLE>
+  .no-issues {display: none}
+</STYLE>
+{/style_block}
+
+{<body_content}
+
+<h2 class="slds-text-heading--large slds-truncate">VF Page Analysis</h2>
+<div class="slds-m-right--large">
+<P>
+<table class="slds-table slds-table--bordered slds-table--cell-buffer">
+  <tbody>
+  {#pages}
+    <tr {@eq key=no_issues value="true" type="boolean"}class="no-issues"{/eq} >
+      <td data-label="Page Name" colspan="4">
+        <div class="slds-text-heading--large">{Name}</div>
+      </td>
+    </tr>
+    <tr {@eq key=no_issues value="true" type="boolean"}class="no-issues"{/eq} >
+      <td data-label="Overview" class="slds-cell-shrink slds-align-top slds-text-body--medium slds-align--top">
+        Controller Type: {info.controller_type} <BR />
+        Controller: {info.controller} <BR />
+        Extensions: {info.extensions} <BR />
+        Related Scripts: <div class="slds-text-body--small slds-truncate"><UL>{#info.script_resources}<LI>{.}{/info.script_resources}</UL></div><BR />
+        Viewstate: {info.viewstate}
+      </td>
+      <td data-label="Markup Issues" class="slds-text-body--medium">
+      <UL>
+                {#markup_issues}
+                  <LI>
+                  {@gt key=line value=0}
+                    <div class="slds-theme--shade"><strong>{name}</strong> at line <strong>{line}</strong> in <strong>{file}</strong> ({severity})</div>
+                  {:else}
+                    <div class="slds-theme--shade"><strong>{name}</strong> not found in <strong>{file}</strong> ({severity})</div>
+                  {/gt}
+                  <P class="slds-text-body--small">{description}</P>
+                  <P class="slds-text-body--small">{suggestions}</P>
+                  <HR />
+                  </LI>
+                {/markup_issues}
+      </UL>
+
+      <UL>
+                {#js_issues}
+                  <LI>
+                  {@gt key=line value=0}
+                    <div class="slds-theme--shade"><strong>{name}</strong> at line <strong>{line}</strong> in <strong>{file}</strong></div>
+                  {:else}
+                    <div class="slds-theme--shade"><strong>{name}</strong> not found in <strong>{file}</strong></div>
+                  {/gt}
+                  <P class="slds-text-body--small">{description}</P>
+                  <P class="slds-text-body--small">{suggestions}</P>
+                  <HR />
+                  </LI>
+                {/js_issues}
+      </UL>
+      </td>
+    </tr>
+    {/pages}
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<ul class="slds-list--vertical slds-has-dividers--bottom-space slds-has-selection">
+
+  <li class="slds-list__item">
+    <div class="line-div slds-media slds-tile">
+      <div class="slds-p-around--small">
+        {Name}
+
+
+        <UL>
+
+        </UL>
+
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+
+</P>
+</div>
+{/body_content}

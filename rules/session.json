@@ -1,0 +1,13 @@
+{
+	"name":"Related List component used",
+	"type":"markup",
+	"inclusions":["$api.session_id","getsessionid()"],
+	"inclusions_rule":"any",
+	"exclusions":null,
+	"exclusions_rule":null,
+	"description":"Session ID is not supported in LEX",
+	"issues":"LEX does not have access to the API session token and related integrations may break.",
+	"suggestions":"There is no equivalent in LEX, so the integrations will need to be refactored.",
+	"auto":null,
+	"severity:": "warning"
+}

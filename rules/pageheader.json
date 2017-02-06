@@ -1,0 +1,13 @@
+{
+	"name":"Page Header or Sidebar enabled",
+	"type":"markup",
+	"inclusions":["showHeader=true","showsidebar=true"],
+	"inclusions_rule":"any",
+	"exclusions":null,
+	"exclusions_rule":null,
+	"description":"The page component has ShowHeader or ShowSidebar enabled.",
+	"issues":"LEX does not support these attributes.",
+	"suggestions":"There is no equivalent to these attributes in LEX, so they shoud be false.",
+	"auto":null,
+	"severity:": "error"
+}

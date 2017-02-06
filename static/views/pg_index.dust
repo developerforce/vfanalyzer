@@ -1,0 +1,10 @@
+{>"tmpl_main"/}
+
+{<title}VF Page Analyzer{/title}
+{<body_content}
+
+<h2 class="slds-text-heading--large slds-truncate">Welcome to Visualforce Analyzer (tm)</h2>
+<div class="slds-m-right--large">
+Polaroid fashion axe forage vaporware aesthetic sustainable. Austin pok pok polaroid, humblebrag narwhal sriracha vice cornhole copper mug dreamcatcher meh paleo waistcoat. Keytar keffiyeh selfies unicorn. Sriracha locavore fap la croix kitsch succulents salvia, prism lumbersexual asymmetrical PBR&B. Lomo portland franzen iceland. Glossier jianbing chicharrones art party wolf, kickstarter next level raclette tilde. Fashion axe heirloom mlkshk readymade venmo gastropub YOLO semiotics pabst, leggings stumptown prism lo-fi single-origin coffee.
+</div>
+{/body_content}

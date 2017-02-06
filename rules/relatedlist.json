@@ -1,0 +1,13 @@
+{
+	"name":"Related List component used",
+	"type":"markup",
+	"inclusions":["<apex:relatedlist"],
+	"inclusions_rule":"any",
+	"exclusions":null,
+	"exclusions_rule":null,
+	"description":"The page refers to the relatedList component.",
+	"issues":"LEX does not support this component.",
+	"suggestions":"There is no equivalent to these attributes in LEX, so they shoud be false.",
+	"auto":null,
+	"severity:": "warning"
+}
