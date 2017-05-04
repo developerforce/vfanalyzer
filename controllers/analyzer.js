@@ -321,12 +321,14 @@ function getThirdPartyResources(url,routedinfo,callback) {
 									 .done(function (res,err) {
 													 if(err) {debug.log(err); callback("");}
 													 else{
-														 var zip = adm_zip(res.getBody());
-														 if(srname=="windowhref") {
-															 	debug.log("ZIP RESOURCE!!!!!>>>>>"+dir);
-														 		debug.log(zip.readAsText(dir));
+														 try {
+															 	var zip = adm_zip(res.getBody());
+														 		callback(zip.readAsText(dir),"Static Resource:"+srname+","+dir);
+															} catch (e) {
+																debug.log("ZIP ERROR!");
+																debug.log(e);
+																callback("");
 															}
-														 callback(zip.readAsText(dir),"Static Resource:"+srname+","+dir);
 													 }
 												 });
 								 } else { callback(""); debug.log(url+" never found.  Try SELECT ID, Name, Body from StaticResource WHERE Name = '"+srname+"'"); }

@@ -8,7 +8,6 @@ var path = require('path')
 var dust = require('express-dustjs')
 var session = require('express-session')
 
-
 //local utils
 var debug = require('./util/debug');
 
@@ -23,7 +22,7 @@ var sessionOptions = {
 app.use(session(sessionOptions));
 
 app.engine('dust', dust.engine({
-  // Use dustjs-helpers 
+  // Use dustjs-helpers
   useHelpers: true
 }))
 app.set('view engine', 'dust');
