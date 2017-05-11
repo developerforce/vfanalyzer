@@ -12,6 +12,14 @@ module.exports = {
 		    redirectUri: 'http://localhost:8675/oauth/_callback'
 		});
 
+		if(process.env && process.env.clientId) {
+			oauth2 = new jsforce.OAuth2({
+					clientId: process.env.clientId,
+					clientSecret: process.env.clientSecret,
+					redirectUri: process.env.redirectUri
+			});
+		}
+
 		/* SF OAuth request, redirect to SF login */
 		app.get('/oauth/auth', function(req, res) {
 		    res.redirect(oauth2.getAuthorizationUrl({scope: 'api id web'}));
