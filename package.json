@@ -18,7 +18,7 @@
     "sync-request": "^4.0.1",
     "then-request": "^2.2.0",
     "underscore": "*",
-    "command-line-args": "^4.0.2",
+    "command-line-args": "^4.0.2"
   },
   "author": "",
   "license": "ISC"
