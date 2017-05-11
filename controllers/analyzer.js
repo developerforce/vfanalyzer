@@ -282,8 +282,12 @@ function getThirdPartyResources(url,routedinfo,callback) {
 				if(url.indexOf('http') >= 0) { //normal third party resource, pull and add
 					request('GET', url).done(function (res,err) {
 											if(err) {debug.log(err); callback("");}
-											else{callback(res.getBody().toString('utf8'),"Remote File:"+url);}
-									});
+											else{	try {
+														callback(res.getBody().toString('utf8'),"Remote File:"+url);
+													} catch(e) {
+														debug.log(e); callback("");
+													}
+											}});
 					return;
 				}
 
