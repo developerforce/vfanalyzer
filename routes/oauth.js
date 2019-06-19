@@ -7,8 +7,8 @@ module.exports = {
 
 		// Salesforce OAuth2 client information
 		var oauth2 = new jsforce.OAuth2({
-		    clientId: '3MVG9sG9Z3Q1RlbdgwDkzM3OQ0tpEf3kJz_wRM6mpZIpuZR6BqSR37tj_bJXehpwgnzHfx1RgTWiaFRRN1BtU',
-		    clientSecret: '8119117327238297035',
+		    clientId: {PUBLICKEY},
+		    clientSecret: {PRIVATEKEY},
 		    redirectUri: 'http://localhost:8675/oauth/_callback'
 		});
 
